@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@edvisory/okmd-ai-widget": "^1.0.17",
+    "@edvisory/okmd-ai-widget": "^1.0.17-6",
     "@hookform/resolvers": "^3.10.0",
     "@tanstack/react-query": "^5.66.0",
     "antd": "^5.23.3",
