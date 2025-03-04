@@ -1,6 +1,5 @@
 import Widget from "./components/Widget";
-// import "@edvisory/okmd-ai-widget/dist/esm/index.css";
-import "../../dist/esm/index.css";
+import "@edvisory/okmd-ai-widget/dist/esm/index.css";
 
 export default function Home() {
   return (

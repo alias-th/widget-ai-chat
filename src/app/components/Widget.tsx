@@ -1,7 +1,6 @@
 "use client";
 import React, { FC } from "react";
-// import { OkmdAiWidget } from "@edvisory/okmd-ai-widget";
-import { OkmdAiWidget } from "../../../dist/esm/index";
+import { OkmdAiWidget } from "@edvisory/okmd-ai-widget";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();
