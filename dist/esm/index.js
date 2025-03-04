@@ -47410,13 +47410,11 @@ const ChatFloatingBox = (props) => {
 
 const OkmdAiWidgetInner = ({ apiKey, onChatChange, onClose, onOpen, onLogin, }) => {
     const [isOpenChatBox, setIsOpenChatBox] = useState(false);
-    const [isRenderChatBox, setIsRenderChatBox] = useState(false);
-    const [position, setPosition] = useState({ top: 0, right: 0 });
+    const [position, setPosition] = useState({});
     const targetRef = useRef(null);
     const tooltipRef = useRef(null);
     const handleFloatingButtonClick = () => {
         setIsOpenChatBox((prev) => !prev);
-        setIsRenderChatBox(true);
     };
     useEffect(() => {
         const calculateGap = () => {
@@ -47425,8 +47423,8 @@ const OkmdAiWidgetInner = ({ apiKey, onChatChange, onClose, onOpen, onLogin, }) 
             const targetRect = targetRef.current.getBoundingClientRect();
             const tooltipRect = tooltipRef.current.getBoundingClientRect();
             setPosition({
-                top: targetRect.top - tooltipRect.height - 55, // Position above target
-                right: 14,
+                top: targetRect.top - tooltipRect.height - 55,
+                left: targetRect.right - tooltipRect.width,
             });
         };
         calculateGap();
